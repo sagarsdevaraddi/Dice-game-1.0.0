@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+ body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(141, 141, 252);
+ }
+ h1{
+    font-size: 50px;
+    color: green;
+ } 
+ .bgg{
+    padding: 5px;
+    background-color: rgb(110, 252, 221);
+    color: rgb(36, 25, 24);
+    font-family:  'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    margin-right: 120px;
+ }
+ .n{
+    padding: 5px;
+    background-color: rgb(110, 252, 221);
+    color: rgb(36, 25, 24);
+    font-family:  'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    margin-left: 20px;
+ }
+ .co{
+   box-shadow: 5px 5px 10px;
+ }
+ img{
+    margin-right: 25px;
+ }
+
+    </style>
+</head>
+<body>
+    <center>
+         <h2>Welcome to The Dice Game </h2>
+         <h3>please player-1 click first and later player-2 click</h3>
+        <h1 class="dis"> Winner is? </h1>
+        <input class="bgg  co"type="button" onclick="Playone()"  value="Player-1 click">
+
+        <input class="n  co"type="button" onclick="Playtwo()" value="player-2 click">
+        <br> <br>
+
+        <div >
+           <span class="imk"></span>
+           <span class="imk1"></span>
+        </div>
+    </center>
+
+
+    
+
+    <script>
+               
+       let Dicenum = Math.floor(Math.random()*6) + 1
+
+
+        function Playone() {
+
+           
+             
+            
+          switch (Dicenum) {
+            case 1: document.querySelector(".imk").innerHTML = "<img src='/one.jpg'>"
+                
+                break;
+            case 2: document.querySelector(".imk").innerHTML = "<img src='/two.jpg'>"
+            break;
+            case 3: document.querySelector(".imk").innerHTML = "<img src='/three.jpg'>"
+            break;
+            case 4: document.querySelector(".imk").innerHTML = "<img src='/four.jpg'>"
+            break;
+            case 5: document.querySelector(".imk").innerHTML = "<img src='/five.jpg'>"
+            break;
+            case 6: document.querySelector(".imk").innerHTML = "<img src='/six.jpg'>"
+            break;
+
+            default: alert("Error")
+                break;
+          }
+
+
+ 
+          
+         
+         }
+         let Dicenum1 = Math.floor(Math.random()*6) + 1
+         
+        function Playtwo() {
+
+            
+          
+          switch (Dicenum1) {
+            case 1: document.querySelector(".imk1").innerHTML = "<img src='/one.jpg'>"
+            break;
+            case 2: document.querySelector(".imk1").innerHTML = "<img src='/two.jpg'>"
+            break;
+            case 3: document.querySelector(".imk1").innerHTML = "<img src='/three.jpg'>"
+            break;
+            case 4: document.querySelector(".imk1").innerHTML = "<img src='/four.jpg'>"
+            break;
+            case 5: document.querySelector(".imk1").innerHTML = "<img src='/five.jpg'>"
+            break;
+            case 6: document.querySelector(".imk1").innerHTML = "<img src='/six.jpg'>"
+            break;
+
+            default: alert("Error")
+                break;
+          }
+
+
+          
+          
+          
+          
+          
+          
+          
+  
+             if(Dicenum === Dicenum1){
+                
+                Head.textContent = "draw"
+             }
+             else if(Dicenum > Dicenum1){
+                Head.textContent = "player 1 wins"
+             }
+             else{
+                Head.textContent = "player 2 wins"
+             }
+          
+         }
+      
+         
+         let Head = document.querySelector(".dis")
+
+
+
+
+
+
+
+          
+         
+        
+    
+            
+         
+              
+         
+    </script>
+</body>
+</html>
